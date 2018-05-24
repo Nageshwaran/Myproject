@@ -22,7 +22,7 @@ public class MessageService {
 		   ArrayList<Result> list = new ArrayList<Result>();
 		   try{
 		    Class.forName("com.mysql.jdbc.Driver");  
-			connection=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test","rootu","");  
+			connection=DriverManager.getConnection("jdbc:mysql://192.168.6.14:3306/bug","root","redhat");  
 			System.out.println("working"); 
 			PreparedStatement pstmt= connection.prepareStatement("select * from `persons` where `PersonID` between ? and ?	");
 			pstmt.setInt(1, student.getId());
